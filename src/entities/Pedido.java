@@ -6,14 +6,13 @@ import java.util.List;
 public class Pedido {
     private Cliente cliente;
     private Vendedor vendedor;
-    private List<Item> itens;
+    private List<Item> itens = new ArrayList<>();
     private DataPedido data; 
 
     public Pedido(Cliente cliente, Vendedor vendedor, DataPedido data) { 
         this.cliente = cliente;
         this.vendedor = vendedor;
         this.data = data;
-        this.itens = new ArrayList<>(); 
     }
 
     public void adicionarItem(Item item) {

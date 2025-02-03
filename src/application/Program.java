@@ -56,7 +56,6 @@ public class Program {
             // Solicitar a quantidade de produtos a serem adicionados ao pedido
             System.out.print("Quantos produtos deseja adicionar ao pedido? ");
             int quantidadeProdutos = sc.nextInt();
-            sc.nextLine(); // Limpa buffer
 
             // Exibir os produtos disponíveis e pedir quantidades
             for (int i = 0; i < quantidadeProdutos; i++) {
