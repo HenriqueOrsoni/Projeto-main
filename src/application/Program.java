@@ -88,7 +88,7 @@ public class Program {
             }
 
             System.out.println("Valor Total: R$" + pedido.calcularValorTotal());
-            System.out.printf("Comissão do Vendedor: R$%.2f\n", pedido.calcularComissao());
+            System.out.printf("Comissão do(a) Vendedor(a): R$%.2f\n", pedido.calcularComissao());
 
         } catch (Exception e) {
             System.out.println("Ocorreu um erro durante a execução do programa. Verifique os dados inseridos e tente novamente.");
