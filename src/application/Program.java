@@ -77,7 +77,7 @@ public class Program {
             }
 
             // Exibir resumo do pedido
-            System.out.println("\nResumo do Pedidooooooo:");
+            System.out.println("\nResumo do Pedido:");
             System.out.println("Cliente: " + pedido.getCliente().getNome() + " (CPF: " + pedido.getCliente().getCpf() + ")");
             System.out.println("Vendedor: " + pedido.getVendedor().getNome());
             System.out.println("Data: " + pedido.getData());
