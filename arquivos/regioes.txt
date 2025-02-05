@@ -1,0 +1,5 @@
+Sul,1
+Nordeste,2
+Sudeste,3
+Centro-Oeste,4
+Norte,5

@@ -1,15 +1,19 @@
 package entities;
 
 public class Vendedor extends Pessoa {
-    private double taxaComissao;
+    private ZonaVendas zona;
 
-    public Vendedor(String nome, int id, double taxaComissao) {
+    public Vendedor(String nome, int id, ZonaVendas zona) {
         super(nome, id);
-        this.taxaComissao = taxaComissao;
+        this.zona = zona;
     }
 
-    public double calcularComissao(double valorVendas) {
-        return valorVendas * taxaComissao;
+    public ZonaVendas getZona() {
+        return zona;
+    }
+
+    public void setZona(ZonaVendas zona) {
+        this.zona = zona;
     }
 
     @Override

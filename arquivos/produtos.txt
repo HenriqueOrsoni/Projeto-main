@@ -3,18 +3,12 @@ Notebook,4500.00,Eletronicos
 Monitor,1200.00,Eletronicos
 Fone de Ouvido,300.00,Eletronicos
 Smartwatch,900.00,Eletronicos
-Câmera Digital,3200.00,Eletronicos
-Console de Videogame,3500.00,Eletronicos
 Geladeira,3200.00,Eletrodomesticos
 Fogão,1800.00,Eletrodomesticos
 Micro-ondas,800.00,Eletrodomesticos
 Máquina de Lavar,2800.00,Eletrodomesticos
-Aspirador de Pó,600.00,Eletrodomesticos
-Ar Condicionado,3500.00,Eletrodomesticos
-Sofá,2500.00,Móveis
-Mesa de Jantar,1800.00,Móveis
-Cadeira de Escritório,750.00,Móveis
-Guarda-Roupa,2700.00,Móveis
-Estante,1300.00,Móveis
-Rack para TV,900.00,Móveis
-Cama Box,2800.00,Móveis
+Sofá,2500.00,Moveis
+Mesa de Jantar,1800.00,Moveis
+Cadeira de Escritório,750.00,Moveis
+Guarda-Roupa,2700.00,Moveis
+Estante,1300.00,Moveis

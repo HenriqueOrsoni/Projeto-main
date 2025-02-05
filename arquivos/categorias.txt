@@ -1,0 +1,3 @@
+Eletronicos,0.05,0.02
+Eletrodomesticos,0.04,0.01
+Moveis,0.03,0.015
