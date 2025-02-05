@@ -24,28 +24,20 @@ public class Program {
             System.out.println("Escolha o Cliente:");
             for (int i = 0; i < clientes.size(); i++) {
                 Cliente cliente = clientes.get(i);
-                String statusZona = (cliente.getZona() == null) ? " (Zona não associada)" : "";
-                System.out.println((i + 1) + ". " + cliente.getNome() + statusZona);
+                System.out.println((i + 1) + ". " + cliente.getNome());
             }
             int clienteIndex = sc.nextInt() - 1;
             Cliente cliente = clientes.get(clienteIndex);
 
-            // Validar se o cliente tem uma zona associada
-            if (cliente.getZona() == null) {
-                System.out.println("Erro: O cliente selecionado não está associado a uma zona de vendas. Escolha outro cliente.");
-                return; // Encerra o programa
-            }
-
             // Solicitar data do pedido
-            DateTimeFormatter formatoEntrada = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            DateTimeFormatter formatoSaida = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
             LocalDate data = null;
 
             while (data == null) {
                 System.out.println("Informe a data do pedido (DD/MM/AAAA):");
                 String dataStr = sc.next();
                 try {
-                    data = LocalDate.parse(dataStr, formatoEntrada);
+                    data = LocalDate.parse(dataStr, fmt);
                     int ano = data.getYear();
                     if (ano < 2000 || ano > 2030) {
                         System.out.println("Erro: O ano deve estar entre 2000 e 2030.");
@@ -83,6 +75,7 @@ public class Program {
             if (resposta.equals("S")) {
                 pedido.cancelar();
                 System.out.println("Pedido cancelado com sucesso!");
+                return;
             } else {
                 System.out.println("Pedido confirmado.");
             }
@@ -92,7 +85,7 @@ public class Program {
             System.out.println("Cliente: " + pedido.getCliente().getNome() + " (CPF: " + pedido.getCliente().getCpf() + ")");
             System.out.println("Vendedor: " + pedido.getVendedor().getNome());
             System.out.println("Representante Regional: " + cliente.getZona().getRegiao().getRepresentante().getNome());
-            System.out.println("Data: " + data.format(formatoSaida)); // Data no formato brasileiro
+            System.out.println("Data: " + data.format(fmt)); 
             System.out.println("Itens:");
             for (Item item : pedido.getItens()) {
                 System.out.println(item.getQuantidade() + "x " + item.getProduto().getNome() + " - R$" + item.calcularValor());
