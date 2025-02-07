@@ -34,14 +34,12 @@ public class Pedido {
     }
 
     public double calcularComissaoVendedor() {
-        if (cancelado) return 0.0;
         return itens.stream()
             .mapToDouble(item -> item.calcularValor() * item.getProduto().getCategoria().getComissaoVendedor())
             .sum();
     }
 
     public double calcularComissaoRepresentante() {
-        if (cancelado) return 0.0;
         return itens.stream()
             .mapToDouble(item -> item.calcularValor() * item.getProduto().getCategoria().getComissaoRepresentante())
             .sum();

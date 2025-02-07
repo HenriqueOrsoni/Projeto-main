@@ -41,7 +41,7 @@ public class Program {
                     int ano = data.getYear();
                     if (ano < 2000 || ano > 2030) {
                         System.out.println("Erro: O ano deve estar entre 2000 e 2030.");
-                        data = null; // Reinicia o loop
+                        data = null; 
                     }
                 } catch (DateTimeParseException e) {
                     System.out.println("Erro: Formato de data inválido. Use o formato DD/MM/AAAA.");
