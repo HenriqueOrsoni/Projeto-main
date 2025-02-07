@@ -17,17 +17,14 @@ public class Pedido {
         this.data = data;
     }
 
-    // Método para cancelar o pedido
     public void cancelar() {
         cancelado = true;
     }
 
-    // Método para verificar se o pedido está cancelado
     public boolean isCancelado() {
         return cancelado;
     }
 
-    // Outros métodos (mantidos)
     public void adicionarItem(Item item) {
         itens.add(item);
     }

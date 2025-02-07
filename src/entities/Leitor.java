@@ -5,7 +5,6 @@ import java.util.*;
 
 public class Leitor {
 
-    // Método para ler representantes regionais
     public static List<RepresentanteRegional> lerRepresentantes(String caminho) throws IOException {
         List<RepresentanteRegional> representantes = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(caminho));
@@ -22,7 +21,6 @@ public class Leitor {
         return representantes;
     }
 
-    // Método para ler regiões
     public static List<RegiaoVendas> lerRegioes(String caminho, List<RepresentanteRegional> representantes) throws IOException {
         List<RegiaoVendas> regioes = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(caminho));
@@ -42,7 +40,6 @@ public class Leitor {
         return regioes;
     }
 
-    // Método para ler vendedores
     public static List<Vendedor> lerVendedores(String caminho) throws IOException {
         List<Vendedor> vendedores = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(caminho));
@@ -59,7 +56,6 @@ public class Leitor {
         return vendedores;
     }
 
-    // Método para ler zonas (simplificado)
     public static List<ZonaVendas> lerZonas(String caminho, List<RegiaoVendas> regioes, List<Vendedor> vendedores) throws IOException {
         List<ZonaVendas> zonas = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(caminho));
@@ -86,7 +82,6 @@ public class Leitor {
         return zonas;
     }
 
-    // Método para ler clientes
     public static List<Cliente> lerClientes(String caminho, List<ZonaVendas> zonas) throws IOException {
         List<Cliente> clientes = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(caminho));
@@ -115,7 +110,6 @@ public class Leitor {
         return clientes;
     }
 
-    // Método para ler categorias
     public static List<Categoria> lerCategorias(String caminho) throws IOException {
         List<Categoria> categorias = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(caminho));
@@ -132,7 +126,6 @@ public class Leitor {
         return categorias;
     }
 
-    // Método para ler produtos
     public static List<Produto> lerProdutos(String caminho, List<Categoria> categorias) throws IOException {
         List<Produto> produtos = new ArrayList<>();
         BufferedReader br = new BufferedReader(new FileReader(caminho));
