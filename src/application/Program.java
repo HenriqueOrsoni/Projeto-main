@@ -64,7 +64,7 @@ public class Program {
                 Produto produto = produtos.get(produtoIndex);
                 System.out.print("Quantidade: ");
                 int quantidade = sc.nextInt();
-                sc.nextLine(); // Limpar buffer
+                sc.nextLine();
                 pedido.adicionarItem(new Item(produto, quantidade));
             }
 
@@ -73,11 +73,11 @@ public class Program {
             String resposta = sc.next().trim().toUpperCase();
 
             if (resposta.equals("S")) {
-                pedido.cancelar();
                 System.out.println("Pedido cancelado com sucesso!");
                 return;
             } else {
-                System.out.println("Pedido confirmado.");
+                System.out.println();
+            	System.out.println("Pedido confirmado.");
             }
 
             // Exibir resumo do pedido
@@ -93,12 +93,6 @@ public class Program {
             System.out.println("Valor Total: R$" + pedido.calcularValorTotal());
             System.out.printf("Comissão do Vendedor: R$%.2f\n", pedido.calcularComissaoVendedor());
             System.out.printf("Comissão do Representante: R$%.2f\n", pedido.calcularComissaoRepresentante());
-
-            if (pedido.isCancelado()) {
-                System.out.println("Status: CANCELADO");
-            } else {
-                System.out.println("Status: CONFIRMADO");
-            }
 
         } catch (Exception e) {
             System.out.println("Erro: " + e.getMessage());

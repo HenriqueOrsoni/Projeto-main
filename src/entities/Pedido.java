@@ -9,20 +9,11 @@ public class Pedido {
     private Vendedor vendedor;
     private List<Item> itens = new ArrayList<>();
     private LocalDate data;
-    private boolean cancelado = false; 
 
     public Pedido(Cliente cliente, Vendedor vendedor, LocalDate data) {
         this.cliente = cliente;
         this.vendedor = vendedor;
         this.data = data;
-    }
-
-    public void cancelar() {
-        cancelado = true;
-    }
-
-    public boolean isCancelado() {
-        return cancelado;
     }
 
     public void adicionarItem(Item item) {
